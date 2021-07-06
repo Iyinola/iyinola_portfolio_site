@@ -16,12 +16,17 @@
 	<style type="text/css">
 		.wrapper{
 			background-image: url(images/connect2.jpg);
-			background-attachment: fixed;
+			/*background-attachment: fixed;*/
 			background-repeat: no-repeat;
 			background-size: cover;
-			height:650px;
-			/*width: 100%;*/
-			background-color: rgba(0,0,0,0.7);
+			height:600px;
+			width: auto;
+		}
+
+		.overlay{
+			height: 600px;
+			width: auto;
+			background-color: rgba(0, 0, 0, 0.2);
 		}
 		.menu li{
 			list-style-type: none;
@@ -37,7 +42,7 @@
 		.connect{
 			position: relative;
 			top: 150px;
-			left: 50px;
+			left: 650px;
 		}
 
 		.contact{
@@ -48,14 +53,7 @@
 
 		.contact2{
 			border: 1px solid blue;
-			height: 150px;	
-			border-radius: 10px;
-				
-		}
-
-		.contactwrap{
-			position: relative;
-			left: 100px;
+			border-radius: 10px;		
 		}
 
 		.footer{
@@ -79,29 +77,31 @@
 <body>
 	<div class="container-fluid">
 		<div class="wrapper">
-		<div class="row">
-			<div class="col-md-4 mt-5">
-				<h1 class="text-black text-center"><i> Iyinola Kesinro</i></h1>
-			</div>
+			<div class="overlay">
+				<div class="row">
+					<div class="col-md-4 mt-5">
+						<h2 class="text-black text-center"><i> Iyinola Kesinro</i></h2>
+					</div>
 
-			<div class="col-md-8 menu text-center mt-5">
-				<ul>
-					<li><a href="home.html" id="home" class="m-4"> Home</a></li>
-					<li><a href="home.html" class="m-4"> About</a></li>
-					<li><a href="home.html" class="m-4"> Portfolio</a></li>
-					<li><a href="#connect" class="m-4"> Contact</a></li>
-				</ul>
+					<div class="col-md-8 menu text-center mt-5">
+						<ul>
+							<li><a href="home.html" id="home" class="m-4"> Home</a></li>
+							<li><a href="home.html" class="m-4"> About</a></li>
+							<li><a href="home.html" class="m-4"> Portfolio</a></li>
+							<li><a href="contact.html" class="m-4"> Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="text-center connect">
+						<h1> Connect with </h1>
+						<h1> me today.</h1>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12 text-center pr-3  connect">
-				<h1> Connect with </h1>
-				<h1> me today.</h1>
-			</div>
-		</div>
-	</div>
 
-	<div class="row inquiry mt-5" id="connect">
+		<div class="row inquiry mt-5" id="connect">
 		<div class="col-md-3 contact p-3 text-center">
 			<h2> Hire an Expert</h2>
 			<p> Are you looking for a Fullstack software developer?</p>
@@ -114,17 +114,16 @@
 			<p class="text-primary"> Thank you</p>
 		</div>
 	</div>
-		
-	<div class="row m-auto  p-5 contactwrap">
-		<div class="col-md-10 text-center contact2 p-4">
-			<h2> To reach out to me directly.</h2>
-			<p> Call <u class="text-primary">+234 816 2219 392</u> Monday - Friday: 10am -5pm</p>
+
+	<div class="row my-5">
+		<div class="col-md-8 offset-sm-0 offset-md-2 contact2 text-center">
+			<h2 class="mt-3"> To reach out to me directly.</h2>
+			<p> Call: <u class="text-primary mr-2">+234 816 2219 392</u> Monday - Friday: 10am -5pm</p>
 		</div>
+
 	</div>
 
-	
-
-		<div class="row pt-5 m-auto foot">
+	<div class="row pt-5 m-auto foot">
 			<div class="col-md-12 text-center">
 				<a href="home.html" class="footer"> Home</a>
 				<a href="home.html" class="footer"> About</a>
@@ -138,8 +137,10 @@
 				<a href="http://www.twitter.com/iyinolakeshinro" target="_blank"><img src="images/twitter.png" width="30" class="mr-3"></a>
 			</div>
 		</div>
-			<!-- 1st modal -->
-		<div class="modal" tabindex="-1" id="terms" data-backdrop="static" data-keyboard="false">
+	</div>
+
+	<!-- 1st modal -->
+		<div class="modal" tabhome="-1" id="terms" data-backdrop="static" data-keyboard="false">
   			<div class="modal-dialog modal-dialog-scrollable">
     			<div class="modal-content">
     					<div class="modal-header">
@@ -168,7 +169,7 @@
   			</div>
 		</div>
 		 <!-- second modal -->
-		<div class="modal" tabindex="-1" id="sendenquiry" data-backdrop="static" data-keyboard="false">
+		<div class="modal" tabhome="-1" id="sendenquiry" data-backdrop="static" data-keyboard="false">
  			 <div class="modal-dialog modal-dialog-scrollable">
    				 <div class="modal-content">
       				<div class="modal-header">
@@ -198,7 +199,7 @@
        					<div class="form-group">
        						<textarea rows="6" cols="40" class="form-control"> Message </textarea>
        					</div>
-       					<div class="form-group form-check">
+       					<div class="form-group">
        						<select name="country" class="form-control">
        							<option name="country" value="select"> Select Country</option>
        							<option name="country" value="nigeria"> Nigeria</option>
@@ -214,7 +215,6 @@
    				</div>
   			</div>
 		</div>
-	</div>
 
 	<script type="text/javascript" src="bootstrap/js/jquery-3.6.0.js"></script>
 	<script type="text/javascript" src="bootstrap/js/popper.min.js"></script> 
