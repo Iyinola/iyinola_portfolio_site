@@ -14,9 +14,9 @@
 	<style type="text/css">
 		.carousel-caption{
 			position:fixed;
-			bottom: 200px; 
-
-
+			bottom: 200px;
+			transform: translateY(-10%);
+			max-height: 140px;
 		}
 
 		.overlay::after{
@@ -33,44 +33,35 @@
 			font-size: 20px;
 		}
 
-		/*h1{
-			font-weight: bold;
-		}*/
-	
 	</style>
 </head>
 <body>
-	<div class="row">
-		<div class="col-md-12"></div>
-		<!-- Begin carousel code-->
-		<div id="carouselslider" class="carousel slide" data-ride="carousel">
-			<div class="carousel-inner text-center">
-				<!-- 1st image-->
-				<div class="carousel-item overlay active">
-					<img src="images/laptop5.jpg" alt="slider 1" class="d-block w-100">
-					<!-- caption, title & text -->
-					<div class="carousel-caption mb=5"> 
-						<h1 class="text-primary">Iyinola Kesinro's Tech Space</h1>
-						<p class="text-light d-none d-sm-block"><b> Full Stack Software Developer<b></p>
-						<a href='home.html' target="_blank" class="btn btn-primary mt-3"> VIEW WORK</button></a>                                                                                
-					</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+				  <div class="carousel-inner">
+				    <div class="carousel-item active overlay">
+				      <img class="d-block w-100" src="images/laptop5.jpg" alt="First slide">
+				      	<div class="carousel-caption">
+						   <h1 class="text-primary">Iyinola Kesinro's Tech Space</h1>
+							<p style="color: orange;"><b> Full Stack Software Developer</b></p>
+							<a href='home.html' target="_blank" class="btn btn-primary mt-3">VIEW WORK</a>
+						 </div>
+				    </div>
+				    <div class="carousel-item overlay">
+				      <img class="d-block w-100" src="images/laptop.jpg" alt="Second slide">
+				      	<div class="carousel-caption">  <!-- d-none d-md-block -->
+						   <h1 class="text-primary">Iyinola Kesinro's Tech Space</h1>
+							<p style="color: orange;"><b> Full Stack Software Developer</b></p>
+							<a href='home.html' target="_blank" class="btn btn-primary mt-3">VIEW WORK</a>
+						</div>
+				    </div>
+				  </div>
 				</div>
-1
-				<!-- 2nd image-->
-				<div class="carousel-item overlay">
-					<img src="images/laptop.jpg" alt="slider 2" class="d-block w-100 carousel">
-					<!-- caption, title & text -->
-					<div class="carousel-caption mb=5"> 
-						<h1 class="text-primary" id="demo"></h1>
-						<p class="text-light d-none d-sm-block"><b> Full Stack Software Developer<b></p>
-						<a href='home.html' target="_blank" class="btn btn-primary mt-3"> VIEW WORK</button></a>                                                                                
-					</div>
-				</div>
-				
 			</div>
 		</div>
 	</div>
-
 
 
 	<script type="text/javascript" src="bootstrap/js/jquery-3.6.0.js"></script>
